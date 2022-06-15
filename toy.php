@@ -2,6 +2,7 @@
     require_once __DIR__. "/product.php";
 
     class toy extends product {
+      use accountingProduct;
       public $color;
 
       function __construct($_brand, $_description, $_price, $_color)

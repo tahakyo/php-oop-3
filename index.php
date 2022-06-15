@@ -20,7 +20,7 @@ error_reporting(E_ALL);
     $dogFood = new food("Natural Trainer", "Croccantini per cane gusto anatra e patate", 9.99, "750gr");
     $catToy = new toy("cinesata", "Gioco d'intelligenza con due gradi di difficoltà", 2.50, "Rosso");
     $dogAccessory = new accessory("Elastofit", "Gilet rinfrescante", 30 , "PVA");
-
+    var_dump($dogAccessory);
     // Users
 
     $taha = new user("Taha", "Ghazouani", "taha@gmail.com", true, true);

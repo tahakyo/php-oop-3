@@ -1,5 +1,7 @@
 <?php
+  require_once __DIR__. "/adress.php";
     class user {
+      use adress;
       public $name;
       public $lastName;
       public $mail;
