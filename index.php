@@ -20,18 +20,28 @@ error_reporting(E_ALL);
     $dogFood = new food("Natural Trainer", "Croccantini per cane gusto anatra e patate", 9.99, "750gr");
     $catToy = new toy("cinesata", "Gioco d'intelligenza con due gradi di difficoltà", 2.50, "Rosso");
     $dogAccessory = new accessory("Elastofit", "Gilet rinfrescante", 30 , "PVA");
-    var_dump($dogAccessory);
-    // Users
 
+    $catFood->disponibile = false;
+    // Users
     $taha = new user("Taha", "Ghazouani", "taha@gmail.com", true, true);
+    
+    
+    try {
     $taha-> addToCart($catFood);
+    } catch (Exception $e) {
+      echo "Problem detected: prodotto esaurito";
+    }
     $taha-> addToCart($catToy);
     $taha-> addToCart($dogAccessory);
     // var_dump($taha);
     $casualMember = new user("aassd", "aaawwwq", "dsadasd@mail.com", false, false);
     $casualMember-> addToCart($dogFood);
-    $casualMember-> addToCart($catFood);
-
+    try {
+      $casualMember-> addToCart($catFood);
+    } catch (exception $e) {
+      echo "";
+    }
+    
     
 ?>
 <!DOCTYPE html>

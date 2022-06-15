@@ -23,7 +23,11 @@
         return "$this->name $this->lastName";
       }
       function addToCart($_product) {
-        $this->cart[] = $_product;
+        if ($_product->disponibile) {
+          $this->cart[] = $_product;
+        }else {
+          throw new Exception("Prodotto non disponibile");
+        }
       }
       // public function setDiscount() { 
       //   if ($this->membership = true) {

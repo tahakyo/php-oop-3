@@ -3,6 +3,7 @@
     public $brand;
     public $description;
     public $price;
+    public $disponibile = true;
 
     function __construct($_brand, $_description, $_price) {
       $this->brand = $_brand;

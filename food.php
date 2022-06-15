@@ -1,5 +1,6 @@
 <?php
     require_once __DIR__ . "/product.php";
+    require_once __DIR__. "/accountingProduct.php";
 
     class food extends product {
       use accountingProduct;
